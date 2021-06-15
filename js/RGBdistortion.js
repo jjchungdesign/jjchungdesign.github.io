@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import vertexShader from'./shaders/vertexShader.glsl';
-import fragmentShader from'./shaders/fragmentShader.glsl';
+import vertexShader from './shaders/vertexShader.glsl';
+import fragmentShader from './shaders/fragmentShader.glsl';
 
 
 function detectmob() {
