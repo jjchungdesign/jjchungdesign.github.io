@@ -2,6 +2,9 @@ import * as THREE from 'three';
 import vertexShader from './shaders/vertexShader.glsl';
 import fragmentShader from './shaders/fragmentShader.glsl';
 
+// import THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+// const Three = window.Three;
+
 
 function detectmob() {
     if(window.innerWidth <= 800) {

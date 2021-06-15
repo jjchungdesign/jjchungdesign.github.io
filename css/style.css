@@ -71,6 +71,11 @@ li {
   z-index: 10000;
 }
 
+.cursor-text p {
+  text-transform: uppercase;
+  display: inline;
+}
+
 @media only screen and (max-width: 450px) {
   .cursor-text {
     display: none;
