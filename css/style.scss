@@ -1,0 +1,338 @@
+// Font - Archivo
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,100;125,200;125,300;125,400;125,500;125,600;125,700&display=swap');
+// Font - Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$white: #fafafa;
+$off-white: #aaaaaa;
+$primary-grey: #0a0a0a;
+$light-grey: #505050;
+$dark-grey: #1a1a1a;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $primary-grey;
+	scroll-behavior: smooth;
+	transition: all 1s ease;
+    
+    scrollbar-width: none; /* Firefox */
+
+    /* Chrome Safari */
+    ::-webkit-scrollbar {
+        display: none;
+    } 
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Archivo', sans-serif;
+    color: $white;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: url(../img/cursor.png) 3 3, auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    }
+
+h3 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        cursor: crosshair;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+// CURSOR
+.cursor-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: transparent;
+    font-size: 10px;
+    font-weight: 300;
+    color: $white;
+    z-index: 10000;
+}
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        .cursor-text {
+            display: none;
+        }
+    }
+
+
+
+// PROGRESS BAR
+.scrollbar-container {
+    font-size: 11px;
+    font-weight: 600;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 99999;
+    color: $light-grey;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+
+    a:not(:last-of-type) {
+        margin-bottom: 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.scrollbar {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: $white;
+    transition: height 200ms ease;
+}
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        .scrollbar-container {
+                position: fixed;
+                top: 20px;
+                right: 10px;
+        }
+    }
+
+// HEADER
+header {
+    color: $off-white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+
+.name {
+    margin: auto 30px;
+    padding: 30px 0;
+    
+    a {
+        transition: 0.3s;
+
+        &:hover {
+            color: $primary-grey;
+        }
+    }
+
+    span {
+        opacity: 0;
+    }
+}
+
+.glitch { 
+    animation:glitch 2s steps(100) infinite;
+
+    &:after {
+        position:absolute;
+        animation:glitch 2s steps(100) infinite;
+    }
+} 
+
+$r: rgba(255,0,0,1); $g: rgba(0,255,0,1); $b: rgba(0,0,255,1); $px: 0; $px2:0;
+
+@mixin mini-glitch($c1, $c2, $coeff, $start, $end) {
+  $interval: $end - $start;
+  @for $i from $start through $end {
+    #{$i * 1%} {   
+      @if $i < $start + ($interval/2) {
+        $px : $px + $coeff;
+        $px2: -$px;   
+        text-shadow: #{$px}px 0 0 $c1, #{$px2}px 0 0 $c2;
+      }
+      @else{
+        $px : $px - 1;
+        $px2: -$px;  
+        text-shadow: #{$px}px 0 0 $c1, #{$px2}px 0 0 $c2;
+      } 
+    }
+  }
+  $px: 0;
+  $px2: 0;
+}
+
+@mixin big-glitch($c1, $c2, $distance, $start, $end){
+  @for $i from $start through $end {   
+    #{$i * 1%} {
+      @if $i == $end {
+          text-shadow: 0 0 0 $c1, 0 0 0 $c2;
+      }
+      @else{   
+          $px : $distance;
+          $px2: -$px;
+          text-shadow: #{$px}px 0 0 $c1, #{$px2}px 0 0 $c2;
+      }
+    }
+  }
+  $px: 0;
+  $px2: 0;
+}
+
+@keyframes glitch {
+  @include mini-glitch($r, $b, 1, 0, 10);
+  @include mini-glitch($r, $g, 0.5, 11, 20);  
+  @include mini-glitch($b, $g, 0.7, 21, 40);
+  
+  @include big-glitch($b, $g, 50, 41, 42);
+  
+  @include mini-glitch($r, $g, 0.5, 43, 50); 
+  @include mini-glitch($r, $b, 1, 51, 60);
+  
+  @include big-glitch($r, $g, 30, 61, 62); 
+  
+  @include mini-glitch($r, $b, 0.5, 63, 70);
+  
+  @include big-glitch($r, $b, 70, 71, 72);
+  
+  @include mini-glitch($r, $b, 1, 73, 80);
+  @include mini-glitch($r, $g, 0.5, 81, 90);
+
+  @include big-glitch($g, $b, 60, 91, 92);
+  
+  @include mini-glitch($b, $g, 0.7, 92, 100);
+}
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        .name {
+            width: 100vw;
+            position: fixed;
+            margin: auto 20px;
+            padding: 20px 0;
+        }
+    }
+
+// FOOTER
+footer {
+    color: $off-white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+
+.container {
+    position: relative;
+    margin: auto 30px;
+    padding: 30px 0;
+
+    &__right {
+        position: absolute;
+        text-align: right;
+        font-size: 10px;
+        font-weight: 300;
+        bottom: 30px;
+        right: 0;
+    }
+}
+
+.footer-links {
+    width: fit-content;
+    
+    a {
+        transition: 0.3s;
+
+        &:hover {
+            color: $white;
+            font-size: 1.5em;
+        }
+    }
+
+    &:last-of-type {
+        display: inline-block;
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                color: $white;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        margin-bottom: 20px;
+    }
+}
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        footer {
+            position: relative;
+            bottom: 0;
+        }
+
+        .container__left {
+            position: relative;
+            text-align: center;
+            bottom: 0;
+            right: 0;
+            font-size: 0.75em;
+        }
+
+        .footer-links {
+            font-size: 14px;
+            width: 100%;
+
+            &:last-of-type {
+                margin-bottom: 2em;
+            }
+
+            a {
+                display: block;
+            }
+        }
+        
+        .container__right {
+            position: relative;
+            text-align: center;
+            font-size: 9px;
+            font-weight: 200;
+            bottom: 0;
+            right: 0;
+        }
+    }
