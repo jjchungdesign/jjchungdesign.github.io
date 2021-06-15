@@ -283,8 +283,12 @@ video {
 }
 
 .project-container {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   place-items: center;
   width: 100vw;
   height: 100vh;
@@ -296,9 +300,6 @@ video {
 
 .project-list-container {
   position: absolute;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
 }
 
 .project-list {
@@ -310,13 +311,14 @@ video {
   text-transform: uppercase;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: block;
 }
 
 .project-list:hover {
   -webkit-text-stroke: 0px;
   color: #fafafa;
-  -webkit-transform: skewX(-20deg);
-          transform: skewX(-20deg);
+  -webkit-transform: skew(-20deg, 0deg);
+          transform: skew(-20deg, 0deg);
 }
 
 .project-list p {
@@ -332,7 +334,7 @@ video {
   height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
-  visibility: hidden;
+  z-index: -1;
 }
 
 canvas {
@@ -379,7 +381,6 @@ canvas {
        object-fit: cover;
     visibility: visible;
     opacity: 0.5;
-    z-index: -1;
   }
 }
 

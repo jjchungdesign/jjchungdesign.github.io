@@ -21,12 +21,12 @@
 
 <!-- PROGRESS BAR -->
 <div class="scrollbar-container">
-      <a href="#top" id="hoverable">Intro⠀─────</a>
-      <a href="#works" id="hoverable">WORKS⠀──────────────────</a>
+      <a href="#top" id="hoverable">Intro ─────</a>
+      <a href="#works" id="hoverable">WORKS ──────────────────</a>
       <a href="#contact" id="hoverable">Outro</a>
     <div class="scrollbar">
-      <a href="#top" id="hoverable">Intro⠀─────</a>
-      <a href="#works" id="hoverable">WORKS⠀──────────────────</a>
+      <a href="#top" id="hoverable">Intro ─────</a>
+      <a href="#works" id="hoverable">WORKS ──────────────────</a>
       <a href="#contact" id="hoverable">Outro</a>
     </div>
 </div>
@@ -71,7 +71,7 @@
 
     <div class="hero-wrapper">
       <div class="hero-text" id="appear">
-        <span class="imagehover"><p>Experiential</p><p>Designer<img src="img/portrait.jpg" alt="josephchung" id="portrait"></p></span></div>
+        <span class="imagehover"><p>Experiential</p><p>Designer<img src="./img/portrait.jpg" alt="josephchung" id="portrait"></p></span></div>
       <div class="hero-text" id="appear"><p>creating</p></div>
       <div class="hero-text" id="appear"><p>Unforgettable</p><p>Moments</p></div>
     </div>
@@ -232,6 +232,8 @@
 <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
 <!-- Locomotive -->
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+<!-- three js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <!-- Scripts -->
 <script src="js/cursor.js"></script>
@@ -241,6 +243,19 @@
 <script src="js/progress.js"></script>
 <script src="js/scrollmagic.js"></script>
 <script type="module" src="js/RGBdistortion.js"></script>
+
+<script>
+  $(document).ready(function () {
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && isChrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    });
+</script>
 
 </body>
 </html>
