@@ -1,3 +1,4 @@
+// SkewY
 let proxy = { skew: 0 },
     skewSetter = gsap.quickSetter("#skew", "skewY", "deg"), // fast
     clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
@@ -19,7 +20,6 @@ ScrollTrigger.create({
 });
 
 gsap.set("#skew", {transformOrigin: "left center", force3D: true});
-
 
 // Last skew
 const skew = document.querySelector('.skew');

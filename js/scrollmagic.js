@@ -1,91 +1,102 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
 //------------ Intro ------------ //
 
-  // Mobile version
-  function detectmob() {
-    if(window.innerWidth <= 800) {
-      return true;
-    } else {
-      return false;
-    }
+function detectmob() {
+  if(window.innerWidth <= 800) {
+    return true;
+  } else {
+    return false;
   }
+}
 
-  if(!detectmob()){
+if(!detectmob()){
 
-    // scrollTrigger for desktop
-      gsap.to('#reveal', {
-        scrollTrigger: {
-            trigger: '#fade-trigger',
-            start: "top 87%",
-            end: "bottom 87%",
-            // markers: true,
-            toggleActions: "play none reverse none"
-        },
-        x: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-      });
-  }
+  // desktop
+    gsap.to('#reveal', {
+      scrollTrigger: {
+          trigger: '#fade-trigger',
+          start: "top 87%",
+          end: "bottom 87%",
+          // markers: true,
+          toggleActions: "play none reverse none"
+      },
+      x: 50,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+}
 
-  else {
+else {
 
-      // scrollTrigger for mobile
-      gsap.to('#reveal', {
-        scrollTrigger: {
-            trigger: '#fade-trigger',
-            start: "top 87%",
-            end: "bottom 87%",
-            endTrigger: ".intro-sticky",
-            // markers: true,
-            toggleActions: "play none reverse none"
-        },
-        x: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-      });
-  }
+    // mobile
+    gsap.to('#reveal', {
+      scrollTrigger: {
+          trigger: '#fade-trigger',
+          start: "top 87%",
+          end: "bottom 87%",
+          endTrigger: ".intro-sticky",
+          // markers: true,
+          toggleActions: "play none reverse none"
+      },
+      x: 50,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+}
+
+
 
 // ------------ Hero ------------ //
-gsap.utils.toArray('.hero-wrapper').forEach(section => {
-  const elems = section.querySelectorAll('#appear');
-  // Set starting params for sections
-  gsap.set(elems, {
-    opacity: 0,
-    duration: 0,
-    ease: 'power3.out',
-    overwrite: 'auto',
-  });
-  
-  ScrollTrigger.create({
-    trigger: '#appear-trigger',
-    start: '250px bottom',
+
+let txtAppear = gsap.timeline ({
+
+  scrollTrigger: {
+    trigger: '.hero-sticky',
+    start: 'top 20%',
     end: 'bottom bottom',
     endTrigger: '#appear-end-trigger',
     // markers: true,
-    onEnter: () => gsap.to(elems, {
-      opacity: 1,
-      duration: 0,
-      stagger: 0.75,
-    }),
-    onLeave: () => gsap.to(elems, {
-      opacity: 0,
-      duration: 0.75,
-    }),
-    onEnterBack: () => gsap.to(elems, {
-      opacity: 1,
-      duration: 0,
-      stagger: -0.75,
-    }),
-    onLeaveBack: () => gsap.to(elems, {
-      opacity: 0,
-      duration: 0.5,
-    }),
-  });
-})
+    toggleActions: "play reset resume reset"
+  }});
+
+txtAppear.to('.appear1', { opacity: 1, duration: 0.0001, stagger: 0.75 })
+         .to('.appear2', { opacity: 1, duration: 0.0001, stagger: 0.75 }, "-=1.5")
+
+
+
+
+// ------------ Marquee Text ------------ //
+
+$('.services__left').marquee({
+  //speed in milliseconds of the marquee
+  duration: 20000,
+  //gap in pixels between the tickers
+  gap: 0,
+  //time in milliseconds before the marquee will start animating
+  delayBeforeStart: -99999,
+  //'left' or 'right'
+  direction: 'left',
+  //true or false - should the marquee be duplicated to show an effect of continues flow
+  duplicated: true
+});
+
+$('.services__right').marquee({
+  //speed in milliseconds of the marquee
+  duration: 20000,
+  //gap in pixels between the tickers
+  gap: 0,
+  //time in milliseconds before the marquee will start animating
+  delayBeforeStart: -99999,
+  //'left' or 'right'
+  direction: 'right',
+  //true or false - should the marquee be duplicated to show an effect of continues flow
+  duplicated: true
+});
+
+
 
 // ------------ Horizontal ------------ //
 
@@ -104,52 +115,50 @@ gsap.to(hcontainer, {
   }
 })
 
+
 // ------------ Ending ------------ //
 
-  // Mobile version
-  function detectmob() {
-    if(window.innerWidth <= 800) {
-      return true;
-    } else {
-      return false;
-    }
+function detectmob() {
+  if(window.innerWidth <= 800) {
+    return true;
+  } else {
+    return false;
   }
+}
 
-  if(!detectmob()){
+if(!detectmob()){
 
-    // scrollTrigger for desktop
-    let endingtl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.ending-section',
-        start: "center 50%",
-        end: "center 50%",
-        // markers: true,
-        toggleActions: "play none reset none"
-    }})
+  // desktop
+  let endingtl = gsap.timeline({
+  scrollTrigger: {
+      trigger: '.ending-section',
+      start: "center 51%",
+      end: "center 51%",
+      // markers: true,
+      toggleActions: "play none reset none"
+  }})
 
-    endingtl.to('#ending', { backgroundPosition: '0 30px', opacity: 1, duration: 0.1, ease: 'power3.out', stagger: 0.5 })
-            .to('.ending-text:nth-of-type(2)', { transform: 'skewX(-20deg)' }, "-=0.9")
-            .to('.container__left', { fontSize: '1.25em', color:'#fafafa', ease: 'power3.out' })
-            .to('.name span', { opacity: 1, duration: 0.5, ease: 'power3.out' }, "+=1")
+  endingtl.to('.ending-text', { backgroundPosition: '0 30px', visibility: 'visible', duration: 0.0001, ease: 'power3.out', stagger: 0.5 })
+          .to('#ending', { transform: 'skewX(-20deg)' }, "-=0.3")
+          .to('.container__left, .arrow', { scale: 1.5, transformOrigin: 'left bottom', color:'#fafafa', duration: 1, ease: 'power3.out' })
+          .to('.arrow', { scale: 0.75, fill: '#fafafa', duration: 1, ease: 'power3.out' }, "-=1")
+          .to('.name span', { visibility: 'visible', duration: 0.5, ease: 'power3.out' }, "+=1")
 
-  }
+}
 
-  else {
+else {
 
-    // scrollTrigger for mobile
-    let endingtl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.ending-section',
-        start: "center 50%",
-        end: "center 50%",
-        // markers: true,
-        toggleActions: "play none reset none"
-    }})
+  // mobile
+  let endingtl = gsap.timeline({
+  scrollTrigger: {
+      trigger: '.ending-section',
+      start: "center 50%",
+      end: "center 50%",
+      // markers: true,
+      toggleActions: "play none reset none"
+  }})
 
-    endingtl.to('#ending', { backgroundPosition: '0 30px', opacity: 1, duration: 0.1, ease: 'power3.out', stagger: 0.5 })
-            .to('.ending-text:nth-of-type(2)', { transform: 'skewX(-20deg)' }, "-=0.9")
-            .to('.name span', { opacity: 1, duration: 0.5, ease: 'power3.out' })
-  }
-
-        
-
+  endingtl.to('.ending-text', { backgroundPosition: '0 30px', visibility: 'visible', duration: 0.0001, ease: 'power3.out', stagger: 0.5 })
+          .to('#ending', { transform: 'skewX(-20deg)' }, "-=0.3")
+          .to('.name span', { visibility: 'visible', duration: 0.5, ease: 'power3.out' }, "+=1")
+}

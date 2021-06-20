@@ -4,7 +4,7 @@ gsap.set(".cursor-text", {xPercent: -50, yPercent: -50});
 const circleType = new CircleType(document.getElementById("rotated")).dir(-1);
 
 //Hover Selector
-const $hoverables = document.querySelectorAll('#hoverable');
+const $hoverables = document.querySelectorAll('a');
 
 const ball = document.querySelector(".cursor-text");
 const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
@@ -37,14 +37,12 @@ gsap.ticker.add(() => {
 // Hover an element
 function onMouseHover() {
   TweenMax.to(ball, 0.2, {
-    scale: 1.5,
-    fill: "transparent"
+    scale: 1.5
   })
 }
 function onMouseHoverOut() {
   TweenMax.to(ball, 0.2, {
-    scale: 1,
-    fill: "#fafafa"
+    scale: 1
   })
 }
 

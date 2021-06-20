@@ -1,10 +1,11 @@
-import * as THREE from 'three';
-import vertexShader from './shaders/vertexShader.glsl';
-import fragmentShader from './shaders/fragmentShader.glsl';
+// import * as THREE from 'three';
+// import * as THREE from './lib/three.min.js';
+// import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+// import vertexShader from './shaders/vertexShader.glsl';
+// import fragmentShader from './shaders/fragmentShader.glsl';
 
-// import THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-// const Three = window.Three;
-
+// var vertexShader = document.getElementById("VSHADER_SOURCE").textContent;
+// var fragmentShader = document.getElementById("FSHADER_SOURCE").textContent;
 
 function detectmob() {
     if(window.innerWidth <= 800) {
@@ -145,8 +146,40 @@ if(!detectmob()){
             };
             this.material = new THREE.ShaderMaterial({
                 uniforms: this.uniforms,
-                vertexShader: vertexShader,
-                fragmentShader: fragmentShader,
+                vertexShader: 
+                    `uniform sampler2D uTexture;
+                    uniform vec2 uOffset;
+                    varying vec2 vUv;
+                
+                    #define M_PI 3.1415926535897932384626433832795
+                
+                    vec3 deformationCurve(vec3 position, vec2 uv, vec2 offset) {
+                    position.x = position.x + (cos(uv.y * M_PI) * offset.x);
+                    position.y = position.y + (cos(uv.x * M_PI) * offset.y);
+                    return position;
+                    }
+                
+                    void main() {
+                    vUv = uv;
+                    vec3 newPosition = deformationCurve(position, uv, uOffset);
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+                    }`,
+                fragmentShader:
+                    `uniform sampler2D uTexture;
+                    uniform float uAlpha;
+                    uniform vec2 uOffset;
+                    varying vec2 vUv;
+                    
+                    vec3 rgbShift(sampler2D textureImage, vec2 uv, vec2 offset) {
+                    float r = texture2D(textureImage,uv + offset).r;
+                    vec2 gb = texture2D(textureImage,uv).gb;
+                    return vec3(r,gb);
+                    }
+                    
+                    void main() {
+                    vec3 color = rgbShift(uTexture,vUv,uOffset);
+                    gl_FragColor = vec4(color,uAlpha);
+                    }`,
                 transparent: true,
                 wireframe: true,
                 side: THREE.DoubleSide
