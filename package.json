@@ -1,0 +1,22 @@
+{
+  "name": "jjchungdesignV2.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "smooth-scrollbar": "^8.6.2",
+    "three": "^0.129.0"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.6",
+    "glslify-bundle": "^5.1.1",
+    "glslify-deps": "^1.3.2",
+    "postcss": "^8.3.4"
+  },
+  "description": ""
+}
