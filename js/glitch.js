@@ -32,26 +32,4 @@ function detectmob() {
         $(this).removeClass('glitch');
     }); 
 
-    // Portrait on Hover
-    // var $img = $('#portrait');
-    // $img.hide();
-    // $('.imagehover').mousemove(function(e) {
-    //     $img.stop(1, 1).fadeIn();
-    //     $('#portrait').offset({
-    //         top: e.pageY,
-    //         left: e.pageX
-    //     });
-    // }).mouseleave(function() {
-    //     $img.hide();
-    // });
-
-    // Services section hover effect
-    $('.services').hover(
-        function(){
-            $('.hero-text').css("opacity", "0.1");
-        },
-        function() {
-            $('.hero-text').css("opacity", "1");
-    });
-
 }

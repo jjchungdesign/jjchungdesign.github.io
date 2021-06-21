@@ -140,8 +140,8 @@ if(!detectmob()){
 
   endingtl.to('.ending-text', { backgroundPosition: '0 30px', visibility: 'visible', duration: 0.0001, ease: 'power3.out', stagger: 0.5 })
           .to('#ending', { transform: 'skewX(-20deg)' }, "-=0.3")
-          .to('.container__left, .arrow', { scale: 1.5, transformOrigin: 'left bottom', color:'#fafafa', duration: 1, ease: 'power3.out' })
-          .to('.arrow', { scale: 0.75, fill: '#fafafa', duration: 1, ease: 'power3.out' }, "-=1")
+          .to('.container__left, .arrow-right', { scale: 1.5, transformOrigin: 'left bottom', color:'#fafafa', duration: 1, ease: 'power3.out' })
+          .to('.arrow-right', { scale: 1, fill: '#fafafa', duration: 1, ease: 'power3.out' }, "-=1")
           .to('.name span', { visibility: 'visible', duration: 0.5, ease: 'power3.out' }, "+=1")
 
 }

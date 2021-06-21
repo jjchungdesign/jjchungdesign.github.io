@@ -44,7 +44,7 @@
 
 <!-- HEADER -->
 <header>
-    <h3 class="name"><a href="#" id="hoverable">JOSEPH CHUNG.</a></h3>
+    <h3 class="name"><a href="#">JOSEPH CHUNG.</a></h3>
 </header>
 
 <main>
@@ -64,14 +64,14 @@
 </section>
 
 <!-- CONTENTS -->
-<section class="content-container">
+<section class="content-container" id="skew">
 
-    <div class="content-vid" id="skew">
-        <video autoplay playsinline muted loop preload>
-            <source src="./img/main/starbucksreserve/starbucks_roastery.mp4" disablePictureInPicture/>
+    <div class="content-vid">
+        <video autoplay playsinline muted loop preload disablePictureInPicture controlsList="nodownload">
+            <source src="./img/main/starbucksreserve/starbucks_roastery.mp4"/>
         </video>
     </div>
-    <div class="img-container" id="skew">
+    <div class="img-container">
         <img src="./img/main/starbucksreserve/starbucks-1.jpg" alt="img">
         <img src="./img/main/starbucksreserve/starbucks-2.jpg" alt="img">
         <img src="./img/main/starbucksreserve/starbucks-3.jpg" alt="img">
@@ -93,7 +93,11 @@
 
 <!-- BACK -->
 <div class="back-container">
-    <a href="/index.html#works" class="back" id="hoverable">🡤 Back</a>
+    <a href="/index.html#works" class="back">
+    <span>
+        <svg class="arrow-left" viewBox="0 0 24 24"><polygon points="0 20 4 24 4 7.42 20.59 24 24 20.59 7.41 4 24 4 20 0 0 0 0 20"/></svg>
+    </span>
+    Back</a>
 </div>
 
 </main>

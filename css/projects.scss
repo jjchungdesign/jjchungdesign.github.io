@@ -76,6 +76,10 @@ $dark-grey: #1a1a1a;
     // Mobile
     @media only screen 
     and (max-width: 450px) {
+        .title {
+            white-space: unset;
+        }
+
         .desc-container {
             width: fit-content;
             height: fit-content;
@@ -147,6 +151,13 @@ img {
     }
 }
 
+.arrow-left {
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+    fill: $white;
+}
+
     // Mobile
     @media only screen 
     and (max-width: 450px) {
@@ -167,5 +178,12 @@ img {
             left: 0;
             bottom: 0;
             opacity: 1;
+        }
+
+        .arrow-left {
+            width: 18px;
+            height: 18px;
+            transition: 0.3s;
+            fill: $white;
         }
     }

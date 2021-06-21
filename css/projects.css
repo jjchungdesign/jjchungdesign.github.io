@@ -65,6 +65,9 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .title {
+    white-space: unset;
+  }
   .desc-container {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -140,6 +143,14 @@ img {
   opacity: 1;
 }
 
+.arrow-left {
+  width: 24px;
+  height: 24px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #fafafa;
+}
+
 @media only screen and (max-width: 450px) {
   .back-container {
     color: #fafafa;
@@ -160,6 +171,13 @@ img {
     left: 0;
     bottom: 0;
     opacity: 1;
+  }
+  .arrow-left {
+    width: 18px;
+    height: 18px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    fill: #fafafa;
   }
 }
 /*# sourceMappingURL=projects.css.map */
