@@ -255,6 +255,10 @@ video {
         transform: skew(-20deg, 0deg);
     }
 
+    &:hover ~ .project-desc {
+        opacity: 1;
+    }
+
     p {
         display: inline;
 
@@ -262,6 +266,21 @@ video {
             margin-right: 30px;
         }
     }
+}
+
+.project-desc {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    opacity: 0;
+    background-color: $white;
+    color: $primary-grey;
+    transition: 0.3s;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.4em;
 }
 
 .project-img {
@@ -319,6 +338,15 @@ canvas {
                     display: none;
                 }
             }
+        }
+
+        .project-desc {
+            opacity: 1;
+            font-size: 14px;
+            width: 50vw;
+            margin-top: 30px;
+            background-color: transparent;
+            color: $white;
         }
 
         .project-img {
