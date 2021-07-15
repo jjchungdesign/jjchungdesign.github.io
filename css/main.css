@@ -144,7 +144,7 @@ video {
 }
 
 .services-section {
-  height: 100vh;
+  height: 50vh;
 }
 
 .services-container {
@@ -157,12 +157,11 @@ video {
 }
 
 .services__left, .services__right {
-  font-size: clamp(40px, 5vw, 80px);
+  font-size: clamp(40px, 3vw, 80px);
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.75;
   text-transform: uppercase;
   color: #505050;
-  margin: 20px 0;
   position: relative;
   pointer-events: none;
   overflow: hidden;
