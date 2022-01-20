@@ -4,7 +4,7 @@ const controller = new ScrollMagic.Controller();
 
 //Intro Fading in
 fadeIn.set({},{},0.5)
-    .from('header, footer, .progress-section', 1, { opacity:0, ease:"sine.out" })
+    .from('header, footer', 1, { opacity:0, ease:"sine.out" })
     .from('main', 1, { opacity:0, ease:"sine.out" });
 
 const scene = new ScrollMagic.Scene()

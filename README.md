@@ -1,1 +1,0 @@
-# jjchungdesign.github.io

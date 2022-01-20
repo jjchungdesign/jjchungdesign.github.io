@@ -1,3 +1,9 @@
+if ( $(window).width() <= 600 ) {
+  // Your mobile code goes here
+}else{
+  // Your desktop code goes here
+
+
 gsap.set(".cursor-text", {xPercent: -50, yPercent: -50});
 
 // Circular Text
@@ -54,3 +60,6 @@ spincursor.to('.cursor-text', {
   duration: 15,
   ease:'none',
 });
+
+
+}
