@@ -195,6 +195,7 @@ header {
 @media only screen and (max-width: 450px) {
   header {
     padding: 10px 10px;
+    height: 40px;
   }
   .navBar.left {
     display: none;
