@@ -298,39 +298,39 @@ $red: #ed1c24;
         left: 10px;
     }
     
-    .glitch__item:nth-child(n+2) {
-      opacity: 0;
-      animation-duration: var(--time-anim);
-      animation-delay: var(--delay-anim);
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
+    // .glitch__item:nth-child(n+2) {
+    //   opacity: 0;
+    //   animation-duration: var(--time-anim);
+    //   animation-delay: var(--delay-anim);
+    //   animation-timing-function: linear;
+    //   animation-iteration-count: infinite;
+    // }
     
-    .glitch__item:nth-child(2){
-      background-color: var(--blend-color-1);
-      background-blend-mode: var(--blend-mode-1);
-      animation-name: glitch-anim-1;
-    }
+    // .glitch__item:nth-child(2){
+    //   background-color: var(--blend-color-1);
+    //   background-blend-mode: var(--blend-mode-1);
+    //   animation-name: glitch-anim-1;
+    // }
     
-    .glitch__item:nth-child(2){
-      background-color: var(--blend-color-2);
-      background-blend-mode: var(--blend-mode-2);
-      animation-name: glitch-anim-2;
-    }
+    // .glitch__item:nth-child(2){
+    //   background-color: var(--blend-color-2);
+    //   background-blend-mode: var(--blend-mode-2);
+    //   animation-name: glitch-anim-2;
+    // }
     
-    .glitch__item:nth-child(4){
-      background-color: var(--blend-color-3);
-      background-blend-mode: var(--blend-mode-3);
-      animation-name: glitch-anim-3;
-    }
+    // .glitch__item:nth-child(4){
+    //   background-color: var(--blend-color-3);
+    //   background-blend-mode: var(--blend-mode-3);
+    //   animation-name: glitch-anim-3;
+    // }
     
-    .glitch__item:nth-child(5){
-      background-color: var(--blend-color-4);
-      background-blend-mode: var(--blend-mode-4);
-      animation-name: glitch-anim-flash;
+    // .glitch__item:nth-child(5){
+    //   background-color: var(--blend-color-4);
+    //   background-blend-mode: var(--blend-mode-4);
+    //   animation-name: glitch-anim-flash;
       
       
-    }
+    // }
 }
 
 @keyframes glitch-anim-flash{
