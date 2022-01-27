@@ -258,6 +258,10 @@ header {
         left: 20px;
         margin-bottom: 0;
     }
+
+    &:hover {
+        color: $red;
+    }
 }
 
     // Mobile

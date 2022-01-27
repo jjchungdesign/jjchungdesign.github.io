@@ -240,6 +240,10 @@ header {
   margin-bottom: 0;
 }
 
+.backtotop:hover {
+  color: #ed1c24;
+}
+
 @media only screen and (max-width: 450px) {
   .backtotop {
     color: rgba(98, 98, 98, 0.75);
