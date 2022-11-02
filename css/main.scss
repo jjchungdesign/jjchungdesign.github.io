@@ -109,6 +109,12 @@ $red: #ed1c24;
         border-top: 0.5px solid $white;
     }
 
+    &.ahsnyc {
+        &::before {
+            background-image: url('/img/main/ahsnyc/ahsnyc-12.jpg');
+        }
+    }
+
     &.cyberpunk {
         &::before {
             background-image: url('/img/main/cyberpunk2077/cyberpunk-2.jpg');
@@ -139,7 +145,7 @@ $red: #ed1c24;
         }
     }
 
-    &.cyberpunk, &.adidas, &.yahoo, &.silkroom, &.starbucks {
+    &.ahsnyc, &.cyberpunk, &.adidas, &.yahoo, &.silkroom, &.starbucks {
         &::before {
             content: '';
             background-size: cover;

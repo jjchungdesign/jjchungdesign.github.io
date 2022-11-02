@@ -126,6 +126,10 @@
   border-top: 0.5px solid #fafafa;
 }
 
+.works-item.ahsnyc::before {
+  background-image: url("/img/main/ahsnyc/ahsnyc-14.jpg");
+}
+
 .works-item.cyberpunk::before {
   background-image: url("/img/main/cyberpunk2077/cyberpunk-2.jpg");
 }
@@ -146,7 +150,7 @@
   background-image: url("/img/main/starbucksreserve/starbucks-2.jpg");
 }
 
-.works-item.cyberpunk::before, .works-item.adidas::before, .works-item.yahoo::before, .works-item.silkroom::before, .works-item.starbucks::before {
+.works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.adidas::before, .works-item.yahoo::before, .works-item.silkroom::before, .works-item.starbucks::before {
   content: '';
   background-size: cover;
   position: fixed;
@@ -163,7 +167,7 @@
   transition: 0.3s;
 }
 
-.works-item.cyberpunk:hover::before, .works-item.adidas:hover::before, .works-item.yahoo:hover::before, .works-item.silkroom:hover::before, .works-item.starbucks:hover::before {
+.works-item.ahsnyc:hover::before, .works-item.cyberpunk:hover::before, .works-item.adidas:hover::before, .works-item.yahoo:hover::before, .works-item.silkroom:hover::before, .works-item.starbucks:hover::before {
   opacity: 0.5;
 }
 
