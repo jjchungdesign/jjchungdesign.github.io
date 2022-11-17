@@ -138,6 +138,10 @@
   background-image: url("/img/main/adidaslegacy/adidas-7.jpg");
 }
 
+.works-item.coachella::before {
+  background-image: url("/img/main/coachella2022/coachella-1.jpg");
+}
+
 .works-item.yahoo::before {
   background-image: url("/img/main/yahoomail/yahoo-2.jpg");
 }
@@ -150,7 +154,11 @@
   background-image: url("/img/main/starbucksreserve/starbucks-2.jpg");
 }
 
-.works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.adidas::before, .works-item.yahoo::before, .works-item.silkroom::before, .works-item.starbucks::before {
+.works-item.blank::before {
+  background: transparent;
+}
+
+.works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.adidas::before, .works-item.coachella::before, .works-item.yahoo::before, .works-item.silkroom::before, .works-item.starbucks::before, .works-item.blank::before {
   content: '';
   background-size: cover;
   position: fixed;
@@ -167,7 +175,7 @@
   transition: 0.3s;
 }
 
-.works-item.ahsnyc:hover::before, .works-item.cyberpunk:hover::before, .works-item.adidas:hover::before, .works-item.yahoo:hover::before, .works-item.silkroom:hover::before, .works-item.starbucks:hover::before {
+.works-item.ahsnyc:hover::before, .works-item.cyberpunk:hover::before, .works-item.adidas:hover::before, .works-item.coachella:hover::before, .works-item.yahoo:hover::before, .works-item.silkroom:hover::before, .works-item.starbucks:hover::before, .works-item.blank:hover::before {
   opacity: 0.5;
 }
 
@@ -219,7 +227,7 @@
             align-items: center;
     position: relative;
   }
-  .works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.adidas::before, .works-item.yahoo::before, .works-item.silkroom::before, .works-item.starbucks::before {
+  .works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.adidas::before, .works-item.coachella::before, .works-item.yahoo::before, .works-item.silkroom::before, .works-item.starbucks::before, .works-item.blank::before {
     content: '';
     background-size: cover;
     position: inherit;
@@ -228,7 +236,7 @@
     opacity: 0.5;
     z-index: -1;
   }
-  .works-item.ahsnyc:hover::before, .works-item.cyberpunk:hover::before, .works-item.adidas:hover::before, .works-item.yahoo:hover::before, .works-item.silkroom:hover::before, .works-item.starbucks:hover::before {
+  .works-item.ahsnyc:hover::before, .works-item.cyberpunk:hover::before, .works-item.adidas:hover::before, .works-item.coachella:hover::before, .works-item.yahoo:hover::before, .works-item.silkroom:hover::before, .works-item.starbucks:hover::before, .works-item.blank:hover::before {
     opacity: 0.5;
   }
   .works-list {
