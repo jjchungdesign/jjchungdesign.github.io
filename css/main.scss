@@ -109,6 +109,12 @@ $red: #ed1c24;
         border-top: 0.5px solid $white;
     }
 
+    &.hondaverse {
+        &::before {
+            background-image: url('/img/main/hondaverse/hondaverse-1.jpg');
+        }
+    }
+
     &.ahsnyc {
         &::before {
             background-image: url('/img/main/ahsnyc/ahsnyc-1.jpg');
@@ -157,7 +163,7 @@ $red: #ed1c24;
         }
     }
 
-    &.ahsnyc, &.cyberpunk, &.adidas, &.coachella, &.yahoo, &.silkroom, &.starbucks, &.blank {
+    &.hondaverse, &.ahsnyc, &.cyberpunk, &.adidas, &.coachella, &.yahoo, &.silkroom, &.starbucks, &.blank {
         &::before {
             content: '';
             background-size: cover;
@@ -215,7 +221,7 @@ $red: #ed1c24;
             align-items: center;
             position: relative;
 
-            &.ahsnyc, &.cyberpunk, &.adidas, &.coachella, &.yahoo, &.silkroom, &.starbucks, &.blank {
+            &.hondaverse, &.ahsnyc, &.cyberpunk, &.adidas, &.coachella, &.yahoo, &.silkroom, &.starbucks, &.blank {
                 &::before {
                     content: '';
                     background-size: cover;
@@ -772,7 +778,7 @@ $red: #ed1c24;
 
 .brand-line {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(14vw, 1fr));
     grid-gap: 20px;
     place-items: center;
     text-align: center;
