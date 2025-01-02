@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700");
 * {
   margin: 0;
@@ -212,6 +211,7 @@ footer {
   width: 100vw;
   border-top: 0.5px solid #505050;
   background-color: #0a0a0a;
+  display: flex;
 }
 
 .footerBar {
@@ -222,8 +222,7 @@ footer {
 @media only screen and (max-width: 450px) {
   footer {
     padding: 5px 10px;
-  }
-  .footerBar {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

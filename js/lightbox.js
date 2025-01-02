@@ -33,45 +33,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Close the lightbox
-    closeBtn.addEventListener('click', function () {
+    function closeModal() {
         lightboxImage.style.opacity = 0; // Fade out the image
         lightboxImage.style.transform = 'scale(0.95)'; // Scale the image down
         setTimeout(() => {
             modal.style.display = "none"; // Hide the modal after animation
         }, 400); // Match the duration of the transition
-    });
+    }
 
     // Close the lightbox when clicking outside the image
     modal.addEventListener('click', function (e) {
         if (e.target === modal) {
-            closeBtn.click(); // Trigger close action if background is clicked
+            closeModal(); // Trigger close action if background is clicked
         }
     });
 
-    // Navigate to the previous image
-    prevArrow.addEventListener('click', function (e) {
-        e.stopPropagation(); // Prevent modal click event
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = galleryImages.length - 1; // Go to last image
-        }
-        openModal(galleryImages[currentIndex].src); // Update and open modal with new image
-    });
-
-    // Navigate to the next image
-    nextArrow.addEventListener('click', function (e) {
-        e.stopPropagation(); // Prevent modal click event
-        if (currentIndex < galleryImages.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Go to first image
-        }
-        openModal(galleryImages[currentIndex].src); // Update and open modal with new image
-    });
-
-    // Listen for keyboard arrow key navigation (left and right arrows)
+    // Close the lightbox when the Esc key is pressed
     document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+            closeModal(); // Close the modal if it's open
+        }
+
         if (modal.style.display === "flex") { // Only allow navigation if modal is open
             if (e.key === "ArrowLeft") {
                 // Left arrow key pressed: go to the previous image

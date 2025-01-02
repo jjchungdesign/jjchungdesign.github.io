@@ -258,8 +258,8 @@ footer {
     width: 100vw;
     border-top: 0.5px solid $light-grey;
     background-color: $primary-grey;
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    // align-items: left;
     // justify-content: space-between;
 }
 
@@ -273,9 +273,11 @@ footer {
     and (max-width: 450px) {
         footer {
             padding: 5px 10px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .footerBar {
-            display: block;
-        }
+        // .footerBar {
+        //     display: block;
+        // }
     }
