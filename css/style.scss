@@ -1,7 +1,10 @@
 // Font - Archivo
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,300;125,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&display=swap');
 // Font - Inter
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap');
+// Font - Roboto Mono
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap');
 
 $white: #fafafa;
 $off-white: #aaaaaa;
@@ -33,7 +36,7 @@ html {
 body {
     margin: 0;
     width: 100%;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Archivo', serif;
     color: $white;
     max-width: 100%;
     overflow-x: hidden;
@@ -54,53 +57,53 @@ body {
     }
 
 h1 {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
-    font-size: clamp(40px, 7vw, 250px);
+    font-family: "Archivo", serif;
+    font-size: clamp(40px, 6.5vw, 150px);
     line-height: 1em;
-    font-stretch: 125%;
 }
 
 h2 {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
+    font-family: 'Archivo', serif;
     font-size: clamp(100px, 15vw, 400px);
     line-height: 1em;
-    font-stretch: 125%;
 }
 
 h3 {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
-    font-size: clamp(18px, 1.2vw, 26px);
+    font-family: 'Archivo', serif;
+    font-size: clamp(20px, 3vw, 180px);
     line-height: 1em;
-    font-stretch: 125%;
 }
 
 h4 {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
-    font-size: clamp(10px, 0.8vw, 21px);
+    font-family: 'Archivo', serif;
+    font-size: clamp(16px, 1.5vw, 24px);
     line-height: 1em;
-    font-stretch: 125%;
 }
 
 h5 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 100;
-    font-size: clamp(20px, 4.5vw, 100px);
+    font-family: 'Archivo', serif;
+    font-style: italic;
+    font-size: clamp(24px, 2.5vw, 34px);
     line-height: 1em;
 }
 
-p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: clamp(12px, 1vw, 21px);
-    line-height: 1.3em;
+h6 {
+    font-family: 'Roboto Mono', serif;
+    font-weight: 200;
+    text-transform: lowercase;
+    font-size: clamp(14px, 1.5vw, 24px);
+    line-height: 1.2em;
 
-    span {
+    &:first-letter {
         text-transform: uppercase;
     }
+}
+
+p {
+    font-family: 'Roboto Mono', serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2em;
 }
 
 a {
@@ -127,6 +130,7 @@ li {
         h1 {
             font-size: clamp(32px, 2vw, 26px);
         }
+        
         h4 {
             font-size: clamp(20px, 2vw, 26px);
         }
@@ -174,12 +178,6 @@ header {
 
 .navBar {
     display: inline-block;
-    
-    span {
-        padding: 0 25px;
-        transform: skew(-20deg);
-        display: inline-block;
-    }
 
     &.right {
         float: right;
@@ -211,46 +209,20 @@ header {
         }
 
         .navBar {
-            &.left {
-                display: none;
-            }
-
-            &.right {
-                float: none;
-            }
-
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-                display: table;
-                table-layout: fixed;
-                width: 100%;
-            }
-
-            li {   
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-
-                &:not(last-of-type) {
-                    padding: 0;
-                }
+            h4 {
+                font-size: 3vw;
             }
         }
     }
 
 // BACK TO TOP
 .backtotop {
-    color: rgba(98, 98, 98, 0.3);
+    opacity: 0.4;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     z-index: 9999;
-
-    &.main {
-        padding-top: 60px;
-    }
+    padding-top: 60px;
 
     &.projects {
         position: fixed;
@@ -268,12 +240,45 @@ header {
     @media only screen 
     and (max-width: 450px) {
         .backtotop {
-            color: rgba(98, 98, 98, 0.75);
+            opacity: 0.4;
 
             &.projects {
                 position: inherit;
                 text-align: center;
                 margin-bottom: 60px;
             }
+        }
+    }
+
+
+// FOOTER
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    width: 100vw;
+    border-top: 0.5px solid $light-grey;
+    background-color: $primary-grey;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+}
+
+.footerBar {
+    opacity: 0.4;
+    font-size: clamp(10px, 3vw, 14px);
+}
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        footer {
+            padding: 5px 10px;
+        }
+
+        .footerBar {
+            display: block;
         }
     }

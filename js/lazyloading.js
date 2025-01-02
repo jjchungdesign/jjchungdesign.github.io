@@ -6,7 +6,7 @@ if ( $(window).width() <= 600 ) {
 
   
   // WORKS
-var revealElements = document.getElementsByClassName("works-title");
+var revealElements = document.getElementsByClassName("works-list");
     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
         new ScrollMagic.Scene({
             triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
@@ -18,12 +18,12 @@ var revealElements = document.getElementsByClassName("works-title");
         .addTo(controller);
     }
 
-// PARAGRAPH
-var revealElements = document.getElementsByClassName("para-container");
+// ABOUT
+var revealElements = document.getElementsByClassName("abt");
     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
         new ScrollMagic.Scene({
             triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-            offset: 200,												 // start a little later
+            offset: 100,												 // start a little later
             triggerHook: 0.9
         })
         .setClassToggle(revealElements[i], "visible") // add class toggle
@@ -36,7 +36,7 @@ var revealElements = document.getElementsByClassName("services-wrapper");
     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
         new ScrollMagic.Scene({
             triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-            offset: 200,												 // start a little later
+            offset: 100,												 // start a little later
             triggerHook: 0.9
         })
         .setClassToggle(revealElements[i], "visible") // add class toggle
@@ -44,25 +44,25 @@ var revealElements = document.getElementsByClassName("services-wrapper");
         .addTo(controller);
     }
 
-// BRANDS
-var revealElements = document.getElementsByClassName("brand-line");
-    for (var i=0; i<revealElements.length; i++) { // create a scene for each element
-        new ScrollMagic.Scene({
-            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-            offset: 200,												 // start a little later
-            triggerHook: 0.9
-        })
-        .setClassToggle(revealElements[i], "visible") // add class toggle
-        // .addIndicators({name: "works-title " + (i+1) }) // add indicators (requires plugin)
-        .addTo(controller);
-    }
+// // BRANDS
+// var revealElements = document.getElementsByClassName("brand-line");
+//     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+//         new ScrollMagic.Scene({
+//             triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+//             offset: 200,												 // start a little later
+//             triggerHook: 0.9
+//         })
+//         .setClassToggle(revealElements[i], "visible") // add class toggle
+//         // .addIndicators({name: "works-title " + (i+1) }) // add indicators (requires plugin)
+//         .addTo(controller);
+//     }
 
 // REACH
 var revealElements = document.getElementsByClassName("contact");
     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
         new ScrollMagic.Scene({
             triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-            offset: 200,												 // start a little later
+            offset: 150,												 // start a little later
             triggerHook: 0.9
         })
         .setClassToggle(revealElements[i], "visible") // add class toggle
