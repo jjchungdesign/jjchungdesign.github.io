@@ -15,10 +15,11 @@
 
 @media only screen and (max-width: 450px) {
   .intro {
-    height: calc(100vh - 10px);
+    height: calc(100vh - 100px);
+    width: 100vw;
   }
   .intro-text {
-    font-size: 20px;
+    font-size: 30px;
     margin: 0 auto;
   }
 }
