@@ -13,23 +13,6 @@
   <link rel="stylesheet" href="css/main.css">
 
   <script src="js/marqueeonscroll.js"></script>
-  <script src="js/skew.js"></script>
-
-  <script>
-  // SCROLL TO ANCHOR FOR CHROME
-
-    $(document).ready(function () {
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if (window.location.hash && isChrome) {
-            setTimeout(function () {
-                var hash = window.location.hash;
-                window.location.hash = "";
-                window.location.hash = hash;
-            }, 300);
-        }
-    });
-
-  </script>
     
 </head>
 <body>
@@ -330,6 +313,23 @@
   <script src="js/cursor.js"></script>
   <script src="js/pageload-main.js"></script>
   <script src="js/lazyloading.js"></script>
+  <script src="js/skew.js"></script>
+  
+  <script>
+    // SCROLL TO ANCHOR FOR CHROME
+  
+      $(document).ready(function () {
+          var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+          if (window.location.hash && isChrome) {
+              setTimeout(function () {
+                  var hash = window.location.hash;
+                  window.location.hash = "";
+                  window.location.hash = hash;
+              }, 300);
+          }
+      });
+  
+    </script>
 
 </body>
 </html>
