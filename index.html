@@ -98,7 +98,7 @@
             <h1 class="works-title">FX</h1>
             <h1 class="works-title">GROTESQUERIE</h1>
           </a>
-          <div class="works-content" id="expandable">
+          <div class="works-content">
             <h5 class="works-phrase">" Fine dining gone groteque "</h5>
             <div class="works-image">
               <img src="/img/main/grotesquerie/grotesquerie-1.jpg" alt="grot-1">
@@ -113,7 +113,7 @@
             <h1 class="works-title">REVOLVE</h1>
             <h1 class="works-title">FESTIVAL</h1>
           </a>
-          <div class="works-content" id="expandable">
+          <div class="works-content">
             <h5 class="works-phrase">" Party in the wonderland "</h5>
             <div class="works-image">
               <img src="/img/main/revolvefestival/revolvefestival-1.jpg" alt="rvlv-1">
@@ -129,7 +129,7 @@
             <h1 class="works-title">CYBERPUNK</h1>
             <h1 class="works-title">2077</h1>
           </a>
-          <div class="works-content" id="expandable">
+          <div class="works-content">
             <h5 class="works-phrase">" A night out in 2077 "</h5>
             <div class="works-image">
               <img src="/img/main/cyberpunk2077/cyberpunk-1.jpg" alt="cyber-1">
@@ -144,7 +144,7 @@
             <h1 class="works-title">HONDA</h1>
             <h1 class="works-title">VERSE</h1>
           </a>
-          <div class="works-content" id="expandable">
+          <div class="works-content">
             <h5 class="works-phrase">" Honda. Powering up your game "</h5>
             <div class="works-image">
               <img src="/img/main/hondaverse/hondaverse-1.jpg" alt="honda-1">
@@ -159,7 +159,7 @@
             <h1 class="works-title">AHS</h1>
             <h1 class="works-title">NYC</h1>
           </a>
-          <div class="works-content" id="expandable">
+          <div class="works-content">
             <h5 class="works-phrase">" What's your safeword? "</h5>
             <div class="works-image">
               <img src="/img/main/ahsnyc/ahsnyc-1.jpg" alt="ahs-1">
@@ -328,17 +328,6 @@
           }, 300);
       }
   });
-
-
-// Works Expand Transition
-function toggleHeight() {
-    const expandable = document.getElementById('expandable');
-    if (expandable.style.maxHeight) {
-      expandable.style.maxHeight = null; // Collapse
-    } else {
-      expandable.style.maxHeight = expandable.scrollHeight + "px"; // Expand to fit content's height
-    }
-  }
 
 </script>
 

@@ -68,13 +68,14 @@
 }
 
 .works-container {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .works-item {
   border-bottom: 0.5px solid #fafafa;
   overflow: hidden;
+  position: width 100%;
 }
 .works-item:hover .works-content {
   min-height: -moz-fit-content;
@@ -182,7 +183,7 @@
     background-position: center center;
   }
   .works-item:nth-child(1) {
-    background-image: url("/img/main/grotesquerie/grotesquerie-13.jpg");
+    background-image: url("/img/main/grotesquerie/grotesquerie-1.jpg");
   }
   .works-item:nth-child(2) {
     background-image: url("/img/main/revolvefestival/revolvefestival-1.jpg");
