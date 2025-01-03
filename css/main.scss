@@ -55,6 +55,11 @@ $red: #ed1c24;
   
   .sectiontitle {
     -webkit-text-stroke: 0.5px white; /* Fixed this from $white to #fff */
+    text-shadow:
+        -0.5px -0.5px 0 white
+        -0.5px 0.5px 0 white
+        0.5px -0.5px 0 white
+        0.5px 0.5px 0 white;
     color: transparent;
     text-transform: uppercase;
     padding: 20px 20px 0 20px;
@@ -96,6 +101,10 @@ $red: #ed1c24;
             min-height: fit-content;
             max-height: 3000px;
             transition: all 3s ease;
+            -webkit-transition: all 3s ease;
+            -moz-transition: all 3s ease;
+            -o-transition: all 3s ease;
+            -ms-transition: all 3s ease;
         }
 
         & .works-image {
@@ -135,6 +144,10 @@ $red: #ed1c24;
     min-height: 0;
     max-height: 0;
     transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
 }
 
 .works-phrase {
@@ -145,6 +158,10 @@ $red: #ed1c24;
     height: fit-content;
     overflow: hidden;
     transition: all 0.5s ease 0.5s;
+    -webkit-transition: all 0.5s ease 0.5;
+    -moz-transition: all 0.5s ease 0.5;
+    -o-transition: all 0.5s ease 0.5;
+    -ms-transition: all 0.5s ease 0.5;
 }
 
 .works-image {
@@ -157,7 +174,10 @@ $red: #ed1c24;
     display: flex;
     justify-content: space-between;
     transition: all 0.5s ease 0.5s;
-}
+    -webkit-transition: all 0.5s ease 0.5;
+    -moz-transition: all 0.5s ease 0.5;
+    -o-transition: all 0.5s ease 0.5;
+    -ms-transition: all 0.5s ease 0.5;
 
     img {
         width: calc(100%/3);
@@ -166,6 +186,7 @@ $red: #ed1c24;
         &:nth-child(2) {
             margin: 0 20px 0 20px;
         }       
+    }
 }
 
     // Mobile
@@ -259,7 +280,11 @@ $red: #ed1c24;
 
 .abt {
     opacity: 0;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
 
     &.visible {
         opacity: 1;
@@ -320,7 +345,11 @@ $red: #ed1c24;
 }
 
 .services-wrapper {
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
     width: 55vw;
     height: fit-content;
     position: relative;
@@ -349,7 +378,11 @@ $red: #ed1c24;
     transform: translate(-50%, -50%);
     object-fit: cover;
     opacity: 0;
-    transition: 0.1s;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
 
     z-index: -1;
 

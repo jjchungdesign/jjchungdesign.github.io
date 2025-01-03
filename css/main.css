@@ -43,6 +43,7 @@
 
 .sectiontitle {
   -webkit-text-stroke: 0.5px white; /* Fixed this from $white to #fff */
+  text-shadow: -0.5px -0.5px 0 white -0.5px 0.5px 0 white 0.5px -0.5px 0 white 0.5px 0.5px 0 white;
   color: transparent;
   text-transform: uppercase;
   padding: 20px 20px 0 20px;
@@ -80,6 +81,10 @@
   min-height: fit-content;
   max-height: 3000px;
   transition: all 3s ease;
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  -ms-transition: all 3s ease;
 }
 .works-item:hover .works-image {
   opacity: 1;
@@ -114,6 +119,10 @@
   min-height: 0;
   max-height: 0;
   transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
 }
 
 .works-phrase {
@@ -125,6 +134,10 @@
   height: fit-content;
   overflow: hidden;
   transition: all 0.5s ease 0.5s;
+  -webkit-transition: all 0.5s ease 0.5;
+  -moz-transition: all 0.5s ease 0.5;
+  -o-transition: all 0.5s ease 0.5;
+  -ms-transition: all 0.5s ease 0.5;
 }
 
 .works-image {
@@ -138,13 +151,16 @@
   display: flex;
   justify-content: space-between;
   transition: all 0.5s ease 0.5s;
+  -webkit-transition: all 0.5s ease 0.5;
+  -moz-transition: all 0.5s ease 0.5;
+  -o-transition: all 0.5s ease 0.5;
+  -ms-transition: all 0.5s ease 0.5;
 }
-
-img {
+.works-image img {
   width: 33.3333333333%;
   aspect-ratio: 4/3;
 }
-img:nth-child(2) {
+.works-image img:nth-child(2) {
   margin: 0 20px 0 20px;
 }
 
@@ -220,7 +236,11 @@ img:nth-child(2) {
 
 .abt {
   opacity: 0;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
 }
 .abt.visible {
   opacity: 1;
@@ -271,7 +291,11 @@ img:nth-child(2) {
 }
 
 .services-wrapper {
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
   width: 55vw;
   height: -moz-fit-content;
   height: fit-content;
@@ -299,7 +323,11 @@ img:nth-child(2) {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0;
-  transition: 0.1s;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
   z-index: -1;
 }
 .services-img img {

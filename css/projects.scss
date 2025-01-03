@@ -155,6 +155,10 @@ $red: #ed1c24;
     align-items: center;
     overflow: hidden;
     transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
 }
 
 .lightbox-content {
@@ -163,6 +167,10 @@ $red: #ed1c24;
     max-width: 90%;
     max-height: 90vh;
     transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
 
     img {
         max-width: 100%;
@@ -172,6 +180,10 @@ $red: #ed1c24;
         object-fit: contain;
         transform: scale(0.95);
         transition: opacity 0.5s ease, transform 0.5s ease;
+        -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+        -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+        -o-transition: opacity 0.5s ease, transform 0.5s ease;
+        -ms-transition: opacity 0.5s ease, transform 0.5s ease;
     }
 }
 
@@ -185,6 +197,10 @@ $red: #ed1c24;
     user-select: none;
     z-index: 2;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+    -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+    -o-transition: opacity 0.5s ease, transform 0.5s ease;
+    -ms-transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .left-arrow {
@@ -213,6 +229,10 @@ $red: #ed1c24;
     font-size: 40px;
     cursor: crosshair;
     transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
 
     &:hover {
         color: $red;

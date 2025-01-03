@@ -129,6 +129,10 @@
   align-items: center;
   overflow: hidden;
   transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
 }
 
 .lightbox-content {
@@ -137,6 +141,10 @@
   max-width: 90%;
   max-height: 90vh;
   transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
 }
 .lightbox-content img {
   max-width: 100%;
@@ -147,6 +155,10 @@
      object-fit: contain;
   transform: scale(0.95);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+  -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+  -o-transition: opacity 0.5s ease, transform 0.5s ease;
+  -ms-transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .arrow {
@@ -161,6 +173,10 @@
           user-select: none;
   z-index: 2;
   transition: opacity 0.5s ease, transform 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+  -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+  -o-transition: opacity 0.5s ease, transform 0.5s ease;
+  -ms-transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .left-arrow {
@@ -187,6 +203,10 @@
   font-size: 40px;
   cursor: crosshair;
   transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
 }
 .close-btn:hover {
   color: #ed1c24;

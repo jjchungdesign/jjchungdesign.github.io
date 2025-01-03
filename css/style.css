@@ -11,6 +11,10 @@ html {
   background-color: #0a0a0a;
   scroll-behavior: smooth;
   transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
   scrollbar-width: none; /* Firefox */
   /* Chrome Safari */
 }
