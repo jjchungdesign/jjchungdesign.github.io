@@ -85,6 +85,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: crosshair;
 }
 
 .content-vid video {
@@ -154,7 +155,7 @@
   color: white;
   font-size: 40px;
   padding: 16px;
-  cursor: pointer;
+  cursor: crosshair;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
