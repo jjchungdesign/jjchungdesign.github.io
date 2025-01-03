@@ -54,12 +54,12 @@ $red: #ed1c24;
   }
   
   .sectiontitle {
-    -webkit-text-stroke: 0.5px white; /* Fixed this from $white to #fff */
+    -webkit-text-stroke: 1px white; /* Fixed this from $white to #fff */
     text-shadow:
-        -0.5px -0.5px 0 white
-        -0.5px 0.5px 0 white
-        0.5px -0.5px 0 white
-        0.5px 0.5px 0 white;
+        -1px -1px 0 white
+        -1px 1px 0 white
+        1px -1px 0 white
+        1px 1px 0 white;
     color: transparent;
     text-transform: uppercase;
     padding: 20px 20px 0 20px;

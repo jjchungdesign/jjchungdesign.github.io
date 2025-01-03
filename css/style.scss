@@ -264,8 +264,6 @@ footer {
     border-top: 0.5px solid $light-grey;
     background-color: $primary-grey;
     display: flex;
-    // align-items: left;
-    // justify-content: space-between;
 }
 
 .footerBar {
@@ -281,8 +279,4 @@ footer {
             display: flex;
             flex-direction: column;
         }
-
-        // .footerBar {
-        //     display: block;
-        // }
     }
