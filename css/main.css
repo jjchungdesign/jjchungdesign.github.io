@@ -118,6 +118,7 @@
 .works-content {
   min-height: 0;
   max-height: 0;
+  will-change: max-height;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
