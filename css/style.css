@@ -87,8 +87,8 @@ h6:first-letter {
 p {
   font-family: "Inter", sans-serif;
   font-weight: 200;
-  font-size: clamp(14px, 1em, 17px);
-  line-height: 1.3em;
+  font-size: clamp(12px, 1em, 16px);
+  line-height: 1.2em;
 }
 
 a {
