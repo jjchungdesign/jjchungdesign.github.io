@@ -11,6 +11,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body>
@@ -76,107 +77,153 @@
 <main>
 
 <!-- DESCRIPTION -->
-<section class="desc-container">
-    <h1 class="title">FX GROTESQUERIE</h1>
-    <p class="desc">Welcome to the grotesquerie.. We offer only the finest. <br><br>
-      Fresh meats, unconventional dining experiences, and of course, the best entertainment.
-      But first, you must solve the puzzle and prove that you're worthy of the invite. <br><br>
-      Are you ready to go grotesque?
-    </p>
+<section class="project-section">
+  <div class="desc-wrapper">
 
-    <div class="details">
-      <p># 3D Modeling / Rendering</p>
-      <p># Guest Journey Mapping</p>
-      <p># Spatial Logistics</p>
-      <p># Layout Draft</p>
-      <p># Fabrication Documents</p>
-      <p># Vendor Communication</p>
-      <p># Load-in Management</p>
+    <div class="desc-container">
+      <h3 class="title">FX GROTESQUERIE</h3>
+      <p class="desc">
+        Welcome to the grotesquerie.. We offer only the finest. <br><br>
+        Fresh meats, unconventional dining experiences, and of course, the best entertainment.
+        But first, you must solve the puzzle and prove that you're worthy of the invite. <br><br>
+        Are you ready to go grotesque?
+      </p>
+
+      <div class="music-player">
+        <audio id="background-music" loop>
+          <source src="/music/Lacrimosa.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      
+        <div class="controls">
+          <button id="playPauseBtn">
+            <i class="fa fa-pause"></i>
+          </button>
+          <button id="muteBtn">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </div>
+      
     </div>
 
+    <div class="hero-photo" id="hoverable">
+      <img src="../img/main/grotesquerie/grotesquerie-1.jpg" alt="img1" class="gallery-image">
+    </div>
+
+  </div>  
+
+  <div id="lightbox-modal" class="lightbox-modal">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <div class="lightbox-content">
+      <img src="" alt="Lightbox Image" id="lightbox-image">
+
+      <span class="arrow left-arrow" id="prev-arrow">
+        <svg viewBox="0 0 665.207 592.419">
+          <polygon points="296.209,592.418 410.19,592.419 148.648,330.876 665.207,330.877 665.207,261.542 148.648,261.542 410.19,0 296.209,0 0,296.209"></polygon></svg>
+      </span>
+
+      <span class="arrow right-arrow" id="next-arrow">
+        <svg viewBox="0 0 665.207 592.419">
+          <polygon points="368.998,0.001 255.017,0.001 516.559,261.543 0,261.543 0,330.877 516.559,330.877 255.017,592.419 368.998,592.419 665.207,296.21"></polygon></svg>
+      </span>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="content-gallery">
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-2.jpg" alt="img2" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-3.jpg" alt="img3" class="gallery-image"></div>
+      <div class="gallery-photo vert" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-4.jpg" alt="img4" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-5.jpg" alt="img5" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-6.jpg" alt="img6" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-7.jpg" alt="img7" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-8.jpg" alt="img8" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-9.jpg" alt="img9" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-10.jpg" alt="img10" class="gallery-image"></div>
+      <div class="gallery-photo vert" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-11.jpg" alt="img11" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-12.jpg" alt="img12" class="gallery-image"></div>
+      <div class="gallery-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grotesquerie-13.jpg" alt="img13" class="gallery-image"></div>
+
+    </div>
+  </div>
 </section>
-
-<!-- CONTENTS -->
-
-<!-- Lightbox Modal -->
-<div id="lightbox-modal" class="lightbox-modal">
-  <span class="close-btn" id="close-btn">&times;</span>
-  <div class="lightbox-content">
-    <img src="" alt="Lightbox Image" id="lightbox-image">
-    <span class="arrow left-arrow" id="prev-arrow">🡠</span>
-    <span class="arrow right-arrow" id="next-arrow">🡢</span>
-  </div>
-</div>
-
-<section class="content-container" id="skewYElement">
-
-
-  <div class="content-gallery">
-
-    <div class="gallery-photo hero">
-      <img src="../img/main/grotesquerie/grotesquerie-1.jpg" alt="img1" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-2.jpg" alt="img2" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-3.jpg" alt="img3" class="gallery-image"></div>
-    <div class="gallery-photo vert">
-      <img src="../img/main/grotesquerie/grotesquerie-4.jpg" alt="img4" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-5.jpg" alt="img5" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-6.jpg" alt="img6" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-7.jpg" alt="img7" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-8.jpg" alt="img8" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-9.jpg" alt="img9" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-10.jpg" alt="img10" class="gallery-image"></div>
-    <div class="gallery-photo vert">
-      <img src="../img/main/grotesquerie/grotesquerie-11.jpg" alt="img11" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-12.jpg" alt="img12" class="gallery-image"></div>
-    <div class="gallery-photo">
-      <img src="../img/main/grotesquerie/grotesquerie-13.jpg" alt="img13" class="gallery-image"></div>
-
-  </div>
   
-  <h4 class="process-subtitle">( PROCESS )</h4>
+<section class="process-section">
+  <div class="process-wrapper">
 
-  <div class="process-gallery five-clmn">
+    <div class="process-container">
+      <h3 class="process-title">PROCESS</h3>
+      <div class="process-tags">
+        <p># 3D Modeling / Rendering</p>
+        <p># Guest Journey Mapping</p>
+        <p># Spatial Logistics</p>
+        <p># Layout Draft</p>
+        <p># Fabrication Documents</p>
+        <p># Vendor Communication</p>
+        <p># Load-in Management</p>
+      </div>
+    </div>
 
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-1.jpg" alt="process-img1" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-2.jpg" alt="process-img2" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-3.jpg" alt="process-img3" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-4.jpg" alt="process-img4" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-5.jpg" alt="process-img5" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-6.jpg" alt="process-img6" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-7.jpg" alt="process-img7" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-8.jpg" alt="process-img8" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-9.jpg" alt="process-img9" class="gallery-image"></div>
-    <div class="process-photo">
-      <img src="../img/main/grotesquerie/grot-process-10.jpg" alt="process-img10" class="gallery-image"></div>
+    <div class="process-gallery five-clmn">
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-1.jpg" alt="process-img1" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-2.jpg" alt="process-img2" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-3.jpg" alt="process-img3" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-4.jpg" alt="process-img4" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-5.jpg" alt="process-img5" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-6.jpg" alt="process-img6" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-7.jpg" alt="process-img7" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-8.jpg" alt="process-img8" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-9.jpg" alt="process-img9" class="gallery-image"></div>
+      <div class="process-photo" id="hoverable">
+        <img src="../img/main/grotesquerie/grot-process-10.jpg" alt="process-img10" class="gallery-image"></div>
+    </div>
 
   </div>
 
-  <div class="project-nav">
-    <a href="../ahsnyc" class="project-nav-title left"><h4>🡠 AHS NYC</h4></a>
-    <a href="../revolvefestival" class="project-nav-title right"><h4>REVOLVE FESTIVAL 🡢</h4></a>
+  <div class="project-nav-container">
+    <div class="project-nav">
+      <div class="project-nav-title left">
+        <a href="../ahsnyc">
+          <h3>&nbsp;AHS NYC</h3>
+        </a>
+      </div>
+      <div class="project-nav-title right">
+        <a href="../revolvefestival">
+          <h3>REVOLVE FESTIVAL&nbsp;</h3>
+        </a>
+      </div>
+    </div>
   </div>
 
 </section>
 
-<a href="#top"><h4 class="backtotop projects">back to top 🡡</h4></a>
+<a href="#top">
+  <div class="backtotop projects">
+    <h4>back to top&nbsp;</h4>
+  </div>
+</a>
 
 <!-- FOOTER -->
 <footer>
@@ -206,6 +253,8 @@
   <script src="../js/skew.js"></script>
   <script src="../js/pageload.js"></script>
   <script src="../js/lightbox.js"></script>
+  <script src="../js/titlefadeout.js"></script>
+  <script src="../js/musicplayer.js"></script>
   
 </body>
 </html>

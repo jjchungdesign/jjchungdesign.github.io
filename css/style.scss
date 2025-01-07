@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&display=swap');
 // Font - Roboto Mono
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700');
+// Font - Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap');
 
 $white: #fafafa;
 $off-white: #aaaaaa;
@@ -65,14 +67,17 @@ h1 {
 
 h2 {
     font-family: 'Archivo', serif;
-    font-size: clamp(100px, 15vw, 400px);
+    font-size: 4vw;
+    // font-size: 5vw;
+    // font-size: clamp(100px, 15vw, 400px);
     line-height: 1em;
     font-weight: 600;
 }
 
 h3 {
     font-family: 'Archivo', serif;
-    font-size: clamp(20px, 3vw, 180px);
+    font-size: 2vw;
+    // font-size: clamp(20px, 3vw, 180px);
     line-height: 1em;
 }
 
@@ -90,10 +95,11 @@ h5 {
 }
 
 h6 {
-    font-family: 'Roboto Mono', serif;
+    // font-family: 'Roboto Mono', serif;
+    // font-weight: 200;
+    font-family: 'Inter', sans-serif;
     font-weight: 200;
-    text-transform: lowercase;
-    font-size: clamp(14px, 1.5vw, 24px);
+    font-size: clamp(16px, 1.5vw, 24px);
     line-height: 1.2em;
 
     &:first-letter {
@@ -102,10 +108,10 @@ h6 {
 }
 
 p {
-    font-family: 'Roboto Mono', serif;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.2em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.3em;
 }
 
 a {
@@ -124,6 +130,38 @@ a {
 
 li {
     list-style: none;
+}
+
+.arrow-svg {    
+    svg {
+        max-width: 100%;
+        fill: #fff;
+    }
+
+    &.cntct{
+        width: 3vw;
+        height: 3vw;
+    }
+
+    // &.bckttp {
+    //     width: clamp(13px, 1.1vw, 20px);
+    //     height: clamp(13px, 1.1vw, 20px);
+    // }
+
+    &.dwn {
+        width: 1.5vw;
+        margin-right: 1.5em;
+
+        svg {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 1em;
+        }
+    }
+
+    // &.left, &.right {
+    //     width: 1vw;
+    // }
 }
 
     // Mobile
@@ -168,6 +206,7 @@ header {
     position: fixed;
     z-index: 9999;
     text-transform: uppercase;
+    top: 0;
     padding: 10px 20px;
     width: 100vw;
     height: fit-content;
@@ -222,19 +261,29 @@ header {
     opacity: 0.4;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 80px;
-    z-index: 9999;
-    padding-top: 60px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 10vw auto 40px auto;
+    z-index: 3;
 
     &.projects {
-        position: fixed;
-        bottom: 60px;
-        left: 20px;
-        margin-bottom: 0;
+        margin-top: 5vw;
     }
 
     &:hover {
+        opacity: 1;
         color: $red;
+    }
+
+    &::after {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 592.419 665.207"><polygon points="0,296.209 0,410.19 261.542,148.648 261.542,665.207 330.877,665.207 330.876,148.648 592.419,410.19 592.418,296.209 296.209,0" fill="white"></polygon></svg>');
+        width: clamp(12px, 1vw, 18px);
+    }
+
+
+    &:hover::after {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 592.419 665.207"><polygon points="0,296.209 0,410.19 261.542,148.648 261.542,665.207 330.877,665.207 330.876,148.648 592.419,410.19 592.418,296.209 296.209,0" fill="red"></polygon></svg>');
     }
 }
 
@@ -255,7 +304,7 @@ header {
 
 // FOOTER
 footer {
-    position: fixed;
+    // position: fixed;
     bottom: 0;
     z-index: 9999;
     text-transform: uppercase;

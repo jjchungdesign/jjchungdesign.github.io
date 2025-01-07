@@ -23,7 +23,7 @@ const init = () => {
       const distanceToTranslate = -(gap + width); // Calculate the distance to move
 
       // Speed control (set the duration here)
-      const speed = 5; // Adjust this value to control the speed (smaller = faster)
+      const speed = 10; // Adjust this value to control the speed (smaller = faster)
 
       // Set up GSAP timeline with ScrollTrigger
       tween = gsap.timeline({

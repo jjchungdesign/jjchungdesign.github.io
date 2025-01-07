@@ -55,25 +55,49 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (modal.style.display === "flex") { // Only allow navigation if modal is open
+            // Arrow key functionality for previous and next image
             if (e.key === "ArrowLeft") {
-                // Left arrow key pressed: go to the previous image
-                if (currentIndex > 0) {
-                    currentIndex--;
-                } else {
-                    currentIndex = galleryImages.length - 1; // Go to last image
-                }
-                openModal(galleryImages[currentIndex].src); // Update and open modal with new image
+                goToPreviousImage();
             } else if (e.key === "ArrowRight") {
-                // Right arrow key pressed: go to the next image
-                if (currentIndex < galleryImages.length - 1) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0; // Go to first image
-                }
-                openModal(galleryImages[currentIndex].src); // Update and open modal with new image
+                goToNextImage();
+            }
+
+            // 'X' key functionality to close the modal
+            if (e.key === "x" || e.key === "X") {
+                closeModal(); // Close the modal if 'X' key is pressed
             }
         }
     });
+
+    // Left arrow click to go to previous image
+    prevArrow.addEventListener('click', function() {
+        goToPreviousImage();
+    });
+
+    // Right arrow click to go to next image
+    nextArrow.addEventListener('click', function() {
+        goToNextImage();
+    });
+
+    // Function to go to the previous image
+    function goToPreviousImage() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = galleryImages.length - 1; // Go to last image
+        }
+        openModal(galleryImages[currentIndex].src); // Update and open modal with new image
+    }
+
+    // Function to go to the next image
+    function goToNextImage() {
+        if (currentIndex < galleryImages.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Go to first image
+        }
+        openModal(galleryImages[currentIndex].src); // Update and open modal with new image
+    }
 
     // Listen for swipe gestures on mobile (touch events)
     const handleSwipe = (e) => {
@@ -84,21 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // If swipe distance is positive, it's a right swipe (next image)
         if (swipeDistance > 50) {
-            if (currentIndex < galleryImages.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Go to first image
-            }
-            openModal(galleryImages[currentIndex].src); // Open modal with next image
+            goToNextImage();
         }
         // If swipe distance is negative, it's a left swipe (previous image)
         else if (swipeDistance < -50) {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = galleryImages.length - 1; // Go to last image
-            }
-            openModal(galleryImages[currentIndex].src); // Open modal with previous image
+            goToPreviousImage();
         }
     };
 
@@ -109,4 +123,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Detect the end of the swipe
     modal.addEventListener('touchend', handleSwipe); // Handle swipe logic
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        closeModal();
+    });
 });
