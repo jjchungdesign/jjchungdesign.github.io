@@ -56,10 +56,7 @@
 @media only screen and (max-width: 450px) {
   .sectiontitle-wrapper {
     padding-top: 0;
-  }
-  .sectiontitle {
-    font-size: 15vw;
-    padding: 0;
+    margin-bottom: 10vh;
   }
 }
 .works-wrapper {
@@ -75,9 +72,16 @@
   flex-direction: column;
 }
 
+.works-list {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
 .works-item {
   border-bottom: 0.5px solid #fafafa;
   padding: 15px 0 15px 0;
+  width: 100%;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -92,6 +96,7 @@
 }
 .works-item:hover .works-phrase {
   opacity: 1;
+  color: #fff;
 }
 .works-item.grotesquerie::before {
   background-image: url("/img/main/grotesquerie/grotesquerie-1.jpg");
@@ -100,7 +105,7 @@
   background-image: url("/img/main/hondaverse/hondaverse-1.jpg");
 }
 .works-item.ahsnyc::before {
-  background-image: url("/img/main/ahsnyc/ahsnyc-11.jpg");
+  background-image: url("/img/main/ahsnyc/ahsnyc-1.jpg");
 }
 .works-item.cyberpunk::before {
   background-image: url("/img/main/cyberpunk2077/cyberpunk-2.jpg");
@@ -111,6 +116,7 @@
 .works-item.grotesquerie::before, .works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.hondaverse::before, .works-item.revolve::before {
   content: "";
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   aspect-ratio: 1/1;
   border-radius: 20px;
@@ -132,12 +138,6 @@
   opacity: 1;
 }
 
-.works-list {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-}
-
 .works-title {
   text-transform: uppercase;
   margin-left: 20px;
@@ -150,6 +150,7 @@
 }
 
 .works-phrase {
+  font-weight: 400;
   text-align: center;
   font-style: italic;
   position: fixed;
@@ -166,62 +167,50 @@
 
 @media only screen and (max-width: 450px) {
   .works-wrapper {
+    width: 100vw;
     position: relative;
     height: -moz-fit-content;
     height: fit-content;
     margin-top: 60px;
-  }
-  .works-item {
-    display: grid;
-    align-items: center;
-    position: relative;
-    height: 30vh;
-    background-size: auto calc(100% - 20vw);
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .works-item:nth-child(1) {
-    background-image: url("/img/main/grotesquerie/grotesquerie-1.jpg");
-  }
-  .works-item:nth-child(2) {
-    background-image: url("/img/main/revolvefestival/revolvefestival-1.jpg");
-  }
-  .works-item:nth-child(3) {
-    background-image: url("/img/main/cyberpunk2077/cyberpunk-1.jpg");
-  }
-  .works-item:nth-child(4) {
-    background-image: url("/img/main/hondaverse/hondaverse-1.jpg");
-  }
-  .works-item:nth-child(5) {
-    background-image: url("/img/main/ahsnyc/ahsnyc-1.jpg");
   }
   .works-list {
     opacity: 1;
     height: -moz-fit-content;
     height: fit-content;
     display: grid;
+    justify-content: center;
   }
-  .works-title {
-    margin: 0 10px 0 10px;
-    opacity: 1;
-  }
-  .works-content {
-    min-height: -moz-fit-content;
-    min-height: fit-content;
-    max-height: 100%;
-    opacity: 1;
-  }
-  .works-content h5 {
-    font-size: 14px;
-  }
-  .works-phrase {
-    opacity: 1;
-    text-align: left;
+  .works-item {
+    display: grid;
+    position: relative;
+    height: 40vh;
     padding: 0;
-    margin: 10px 10px 0 10px;
+    width: 100vw;
   }
-  .works-image {
-    display: none;
+  .works-item.grotesquerie::before, .works-item.ahsnyc::before, .works-item.cyberpunk::before, .works-item.hondaverse::before, .works-item.revolve::before {
+    aspect-ratio: 4/3;
+    border-radius: 0;
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 65vw;
+    top: 0;
+    right: 0;
+    margin: 30px auto;
+    transform: none;
+    opacity: 1;
+  }
+  .works-item .works-title {
+    opacity: 1;
+    margin: 0 auto;
+  }
+  .works-item .works-phrase {
+    width: 100%;
+    opacity: 1;
+    position: relative;
+    margin-bottom: 20px;
+    bottom: 0;
+    right: 50%;
   }
 }
 .about-content {
@@ -245,6 +234,7 @@
   width: clamp(150px, 25vw, 400px);
   margin-right: 30px;
   margin-left: auto;
+  border-radius: 20px;
 }
 .abt.portrait img {
   width: 100%;
@@ -322,6 +312,7 @@
   z-index: -1;
 }
 .services-img img {
+  border-radius: 20px;
   width: 30vw;
 }
 
@@ -377,12 +368,15 @@
 
 .contact {
   text-transform: uppercase;
+}
+.contact.left {
   margin-right: auto;
   margin-left: 0;
 }
 .contact.right {
   margin-right: 0;
   margin-left: auto;
+  text-align: right;
 }
 
 @media only screen and (max-width: 450px) {
@@ -399,7 +393,13 @@
     text-align: left;
     margin-left: 20px;
   }
+  .contact-list {
+    width: calc(100vw - 40px);
+  }
   .contact {
     opacity: 1;
+  }
+  .contact span {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */

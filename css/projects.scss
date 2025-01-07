@@ -42,6 +42,35 @@ $red: #ed1c24;
     margin-bottom: 20px;
 }
 
+.music-player {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    }
+    
+/* Controls container */
+.controls {
+    display: flex;
+}
+
+/* Button styling */
+button {
+    margin-right: 30px;
+    font-size: 18px;  /* Adjust icon size */
+    background-color: transparent;
+    color: $light-grey;
+    cursor: crosshair;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    color: $red
+}
+
+button i {
+    margin: 0;  /* Center icons within the button */
+}
+
 .hero-photo {
     border-radius: 20px;
     grid-column: 2 / 4;
@@ -62,7 +91,6 @@ $red: #ed1c24;
 
         &:hover {
             transform: scale(1.1);
-        
         }
     }
 }
@@ -70,13 +98,37 @@ $red: #ed1c24;
     // Mobile
     @media only screen 
     and (max-width: 450px) {
+        .desc-wrapper {
+            grid-template-columns: repeat(1,1fr);
+            width: 90vw;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .desc-container {
             width: 90vw;
             height: fit-content;
-            position: relative;
-            top: 100px;
+            position: static;
+            top: 0;
             left: 0;
-            margin: 0 20px;
+            margin-top: 20vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .music-player {
+            margin-top: 10vw;
+        }
+
+        button {
+            font-size: 24px;
+        }
+
+        .hero-photo {
+            position: relative;
+            grid-column: span 1;
+            margin-top: 20vw;
         }
     }
 
@@ -145,6 +197,25 @@ $red: #ed1c24;
 
 }
 
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        
+        .content-gallery {
+            grid-template-columns: repeat(1,1fr);
+        }
+        
+        .gallery-photo {        
+            &.hero {
+                grid-column: span 1;
+            }
+
+            &.vert {
+                grid-row: span 1;
+            }
+        }
+    }
+
 .process-section {
     width: 100vw;
     height: fit-content;
@@ -210,11 +281,50 @@ $red: #ed1c24;
     }
 }
 
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        .process-wrapper {
+            display: grid;
+            width: 100vw;
+            padding-top: 10vw;
+            padding-bottom: 10vw;
+        }
+
+        .process-container {
+            width: 90vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5vw;
+        }
+
+        .process-gallery {
+
+            &.four-clmn {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        
+            &.five-clmn {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .process-gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .process-photo {
+            border-radius: 10px;
+        }
+    }
+
 .project-nav-container {
     width: 100vw;
     height: fit-content;
     margin-top: 5vw;
     padding-top: 2em;
+    margin-bottom: 5vw;
+    padding-bottom: 2em;
     border-top: 0.5px solid white;
     align-items: center;
 }
@@ -234,7 +344,7 @@ $red: #ed1c24;
 
         &::before {
             content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 665.207 592.419"><polygon points="296.209,592.418 410.19,592.419 148.648,330.876 665.207,330.877 665.207,261.542 148.648,261.542 410.19,0 296.209,0 0,296.209" fill="white"></polygon></svg>');
-            width: 1.5vw;
+            width: clamp(18px, 1.2vw, 37px);
         }
     }
 
@@ -243,7 +353,7 @@ $red: #ed1c24;
 
         &::after {
             content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 665.207 592.419"><polygon points="368.998,0.001 255.017,0.001 516.559,261.543 0,261.543 0,330.877 516.559,330.877 255.017,592.419 368.998,592.419 665.207,296.21" fill="white"></polygon></svg>');
-            width: 1.5vw;
+            width: clamp(18px, 1.2vw, 37px);
         }
     }
 
@@ -255,6 +365,30 @@ $red: #ed1c24;
         content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 665.207 592.419"><polygon points="368.998,0.001 255.017,0.001 516.559,261.543 0,261.543 0,330.877 516.559,330.877 255.017,592.419 368.998,592.419 665.207,296.21" fill="red"></polygon></svg>');
         }
 }
+
+    // Mobile
+    @media only screen 
+    and (max-width: 450px) {
+        .project-nav-container {
+            margin-top: 3vw;
+            padding-top: 2em;
+            margin-bottom: 3vw;
+            padding-bottom: 2em;
+        }
+
+        .project-nav-title {
+            width: fit-content;
+            margin: 20px auto;
+
+            &.left {
+                float: none;
+            }
+        
+            &.right {
+                float: none;
+            }
+        }
+    }
 
 
 /* Lightbox Modal Styles */
@@ -356,96 +490,4 @@ $red: #ed1c24;
     &:hover {
         color: $red;
     }
-}
-
-    // Mobile
-    @media only screen 
-    and (max-width: 450px) {
-        .content-container {
-            width: 90vw;
-            float: none;
-            margin-top: 40vw;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .content-gallery {
-            grid-template-columns: repeat(1,1fr);
-        }
-        
-        .content-subtitle {
-            font-size: 18px;
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-        
-        .gallery-photo {        
-            &.hero {
-                grid-column: span 1;
-            }
-
-            &.vert {
-                grid-row: span 1;
-            }
-        }
-
-        .process-gallery {        
-            &.four-clmn {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        
-            &.five-clmn {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .process-gallery {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .process-subtitle {
-            font-size: 4vw;
-        }
-
-        .arrow {
-            top: 90%;
-            font-size: 30px;
-        }
-
-        .project-nav {
-            h4 {
-                font-size: 3vw;
-            }
-        }
-    }
-
-
-  
-.music-player {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2vw;
-    }
-    
-/* Controls container */
-.controls {
-    display: flex;
-}
-
-/* Button styling */
-button {
-    margin-right: 30px;
-    font-size: 18px;  /* Adjust icon size */
-    background-color: transparent;
-    color: $light-grey;
-    cursor: crosshair;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    color: $red
-}
-
-button i {
-    margin: 0;  /* Center icons within the button */
 }
