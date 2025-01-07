@@ -151,8 +151,7 @@ header {
   top: 0;
   padding: 10px 20px;
   width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 3vw;
   border-bottom: 0.25px solid #fafafa;
   margin: 0 auto;
   background-color: #0a0a0a;
