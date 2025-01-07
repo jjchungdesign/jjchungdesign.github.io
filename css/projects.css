@@ -196,13 +196,14 @@ button i {
 .process-wrapper {
   display: flex;
   padding-top: 3vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
   border-top: 0.5px solid white;
 }
 
 .process-container {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: 5vw;
+  width: 20vw;
+  margin-right: 3vw;
   margin-bottom: 2vw;
 }
 
@@ -218,8 +219,8 @@ button i {
 .process-gallery {
   display: grid;
   grid-gap: 15px;
-  margin-left: 3vw;
-  margin-right: 5vw;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .process-gallery.four-clmn {
   grid-template-columns: repeat(4, 1fr);
@@ -251,7 +252,9 @@ button i {
 @media only screen and (max-width: 450px) {
   .process-wrapper {
     display: grid;
-    width: 100vw;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 10vw;
     padding-bottom: 10vw;
   }
