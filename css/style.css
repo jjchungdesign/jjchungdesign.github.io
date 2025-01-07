@@ -236,7 +236,11 @@ footer {
 @media only screen and (max-width: 450px) {
   footer {
     padding: 5px 10px;
-    display: flex;
-    flex-direction: column;
+  }
+  .footerBar {
+    line-height: 1.2em;
+  }
+  .footerBar span {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -401,6 +401,7 @@
   }
   .contact {
     opacity: 1;
+    line-height: 1.2em;
   }
   .contact span {
     display: block;

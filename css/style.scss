@@ -292,7 +292,12 @@ footer {
     and (max-width: 450px) {
         footer {
             padding: 5px 10px;
-            display: flex;
-            flex-direction: column;
+        }
+
+        .footerBar {
+            line-height: 1.2em;
+            span {
+                display: block;
+            }
         }
     }
