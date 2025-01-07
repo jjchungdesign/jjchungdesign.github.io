@@ -240,6 +240,12 @@ $red: #ed1c24;
                     transform: none;
                     opacity: 1;
                 }
+
+            &:hover {
+                & .works-title {
+                    margin-right: 0;
+                }
+            }
         }
 
         .works-title {

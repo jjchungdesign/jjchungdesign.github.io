@@ -200,6 +200,9 @@
     transform: none;
     opacity: 1;
   }
+  .works-item.grotesquerie:hover .works-title, .works-item.ahsnyc:hover .works-title, .works-item.cyberpunk:hover .works-title, .works-item.hondaverse:hover .works-title, .works-item.revolve:hover .works-title {
+    margin-right: 0;
+  }
   .works-item .works-title {
     opacity: 1;
     margin: 0 auto;
