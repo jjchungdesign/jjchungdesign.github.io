@@ -92,7 +92,7 @@
   border-top: 0.5px solid #fafafa;
 }
 .works-item:hover .works-title {
-  margin-right: 20px;
+  padding-right: 20px;
 }
 .works-item:hover .works-phrase {
   opacity: 1;
@@ -201,7 +201,7 @@
     opacity: 1;
   }
   .works-item.grotesquerie:hover .works-title, .works-item.ahsnyc:hover .works-title, .works-item.cyberpunk:hover .works-title, .works-item.hondaverse:hover .works-title, .works-item.revolve:hover .works-title {
-    margin-right: 0;
+    padding-right: 0;
   }
   .works-item .works-title {
     opacity: 1;
