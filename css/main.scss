@@ -108,6 +108,10 @@ $red: #ed1c24;
         border-top: 0.5px solid $white;
     }
 
+    // &:last-of-type {
+    //     border-bottom: none;
+    // }
+
     &:hover {
         & .works-title {
             padding-right: 20px;
@@ -152,7 +156,7 @@ $red: #ed1c24;
             background-repeat: no-repeat;
             background-position: center center;
             aspect-ratio: 1 / 1;
-            border-radius: 20px;
+            border-radius: 15px;
             position: fixed;
             top: 15vh;
             right: 23vw;
@@ -184,6 +188,13 @@ $red: #ed1c24;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
+
+    &.archive {
+        text-transform: none;
+        font-size: clamp(20px, 1.5vw, 24px);
+        font-style: italic;
+        font-weight: 100;
+    }
 }
 
 .works-phrase {
@@ -229,7 +240,6 @@ $red: #ed1c24;
             &.grotesquerie, &.ahsnyc, &.cyberpunk, &.hondaverse, &.revolve {
                 &::before {
                     aspect-ratio: 4 / 3;
-                    border-radius: 0;
                     position: relative;
                     display: flex;
                     height: auto;
@@ -251,6 +261,10 @@ $red: #ed1c24;
         .works-title {
             opacity: 1;
             margin: 0 auto;
+
+            &.archive {
+                margin-top: 15vw;
+            }
         }
 
         .works-phrase {
@@ -285,7 +299,7 @@ $red: #ed1c24;
         width: clamp(150px, 25vw, 400px);
         margin-right: 30px;
         margin-left: auto;
-        border-radius: 20px;
+        border-radius: 15px;
 
         img {
             width: 100%;
@@ -372,7 +386,7 @@ $red: #ed1c24;
     z-index: -1;
 
     img {
-        border-radius: 20px;
+        border-radius: 15px;
         width: 30vw;
     }
 }
