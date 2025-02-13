@@ -259,6 +259,25 @@ button i {
     grid-column: 3 / 4;
 }
 
+.result-title {
+    margin-top: 4vw;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.result-details {
+    margin-top: 4vw;
+    grid-column: 2 / 4;
+}
+
+.result-text {
+    display: list-item;
+    list-style-type: square;
+    list-style-position: inside;
+
+}
+
+
     // Mobile
     @media only screen 
     and (max-width: 450px) {
